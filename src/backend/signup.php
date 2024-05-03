@@ -14,6 +14,7 @@
     $ans = pg_query($conn,$sql);
     if ($ans){
         echo "User has been created successfully";
+        header("refresh:0;url=../singin.html")
     }else{
         echo "Error: " . pg_last_error();
     }
